@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+/// A button widget that provides an interaction that changes opacity.
+///
+/// Use animated opacity button to add interaction that changes opacity to any Widgets.
+///
+/// You can expand clickable area by specifying [height] or [width], [constraints], [padding].
 class AnimatedOpacityButton extends StatefulWidget {
   AnimatedOpacityButton({
     Key key,
