@@ -66,16 +66,16 @@ class _AnimatedOpacityButtonState extends State<AnimatedOpacityButton> {
         onTapDown: (_) => setState(() {
           _isPressing = true;
         }),
-        child: AnimatedOpacity(
-          opacity: _isPressing ? widget.minimumOpacity : 1.0,
-          duration: widget.duration,
-          child: Container(
-            constraints: widget.constraints,
-            decoration: BoxDecoration(
-              color: Colors.transparent,
-            ),
-            padding: widget.padding,
-            alignment: widget.alignment,
+        child: Container(
+          constraints: widget.constraints,
+          decoration: BoxDecoration(
+            color: Colors.transparent,
+          ),
+          padding: widget.padding,
+          alignment: widget.alignment,
+          child: AnimatedOpacity(
+            opacity: _isPressing ? widget.minimumOpacity : 1.0,
+            duration: widget.duration,
             child: widget.child,
           ),
         ),
