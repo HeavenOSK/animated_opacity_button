@@ -63,6 +63,7 @@ class _AnimatedOpacityButtonState extends State<AnimatedOpacityButton> {
     return AbsorbPointer(
       absorbing: !_canTap,
       child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
         onTap: widget.onTap,
         onTapUp: (_) => setState(() {
           _isPressing = false;
@@ -75,9 +76,6 @@ class _AnimatedOpacityButtonState extends State<AnimatedOpacityButton> {
         }),
         child: Container(
           constraints: widget.constraints,
-          decoration: BoxDecoration(
-            color: Colors.transparent,
-          ),
           padding: widget.padding,
           alignment: widget.alignment,
           child: AnimatedOpacity(
