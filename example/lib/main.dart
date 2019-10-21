@@ -57,24 +57,27 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 AnimatedOpacityButton(
-                  padding: EdgeInsets.all(8),
+                  padding: EdgeInsets.all(16),
                   child: Icon(Icons.add),
                   onTap: _incrementCounter,
                 ),
-                SizedBox(width: 40),
+                const SizedBox(width: 40),
                 AnimatedOpacityButton(
-                  padding: EdgeInsets.all(8),
+                  padding: EdgeInsets.all(16),
                   child: Text('ADD'),
                   onTap: _incrementCounter,
                 ),
-                SizedBox(width: 40),
+                const SizedBox(width: 40),
                 AnimatedOpacityButton(
-                  child: Column(
-                    children: <Widget>[
-                      Icon(Icons.add),
-                      SizedBox(height: 8),
-                      Text('ADD'),
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      children: <Widget>[
+                        Icon(Icons.add),
+                        SizedBox(height: 8),
+                        Text('ADD'),
+                      ],
+                    ),
                   ),
                   onTap: _incrementCounter,
                 ),
