@@ -41,14 +41,16 @@ class _AnimatedOpacityButtonState extends State<AnimatedOpacityButton> {
 
   @override
   void initState() {
-    _canTap = widget.canTap;
     super.initState();
+    _canTap = widget.canTap;
   }
 
   @override
   void didUpdateWidget(AnimatedOpacityButton oldWidget) {
-    _canTap = widget.canTap;
     super.didUpdateWidget(oldWidget);
+    if (widget.canTap != oldWidget.canTap) {
+      _canTap = widget.canTap;
+    }
   }
 
   @override
